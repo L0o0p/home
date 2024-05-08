@@ -1,11 +1,25 @@
 
+import { BrowserRouter } from 'react-router-dom'
 import './App.css'
 import { NavBar } from './NavBar'
+import WraperRoutes from './Router'
 
 function App() {
 
   return (
-    <NavBar />
+    <>
+      <div style={{
+        height: '100%',
+        width: '100%',
+        padding: '0px',
+        backgroundColor: '#fdfbfb',
+      }}>
+        <BrowserRouter>
+          <NavBar />
+          <WraperRoutes />
+        </BrowserRouter>
+      </div>
+    </>
   )
 }
 
