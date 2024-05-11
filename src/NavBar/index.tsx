@@ -5,7 +5,12 @@ import { Link } from 'react-router-dom';
 export const NavBar = () => {
     const tabsX = ['Avatar', 'Home', 'Projects', 'Chat'];
     const tabsY = ['Login', 'Setting'];
-    const [activeTabIndex, setActiveTabIndex] = useState(-1);
+    const [activeTabIndex, setActiveTabIndex] = useState(1); // 初始化为 1，表示第一个标签
+    const [menu, openMenu] = useState(false)
+    const optionClick = () => {
+        openMenu(!menu)
+        console.log(menu)
+    }
 
     // 在组件加载时，尝试从 LocalStorage 获取之前保存的标签索引
     useEffect(() => {
@@ -18,38 +23,50 @@ export const NavBar = () => {
     const handleClick = (index: number) => {
         setActiveTabIndex(index);
         localStorage.setItem('activeTabIndex', index.toString()); // 保存索引到 LocalStorage
+        openMenu(false)
         console.log('clicked the tab', index);
     };
 
     return (
-
-        <div className={styles.navContainer}>
-            <div className={styles.tabs}>
-                {tabsX.map((tab, index) => (
-                    <Link
-                        key={tab}
-                        to={`/${tab.toLowerCase()}`}
-                        className={`${styles.tab} ${index === activeTabIndex ? styles.active : ''}`}
-                        onClick={() => handleClick(index)}
-                    >
-                        {tab}
-                    </Link>
-                ))}
-            </div>
-            <div className={styles.tabs}>
-                <div className={styles.divider}>|</div>
+        <>
+            <div className={styles.navContainer}>
                 <div className={styles.tabs}>
-                    {tabsY.map(tab => (
-                        <div
+                    {tabsX.map((tab, index) => (
+                        <Link
                             key={tab}
-                            className={styles.tabY}  // 添加新类名
+                            to={`/${tab.toLowerCase()}`}
+                            className={`${styles.tab} ${index === activeTabIndex ? styles.active : ''}`}
+                            onClick={() => { handleClick(index); optionClick() }}
                         >
                             {tab}
-                        </div>
+                        </Link>
                     ))}
+
+                </div>
+                <div className={styles.tabs}>
+                    <div className={styles.divider}>|</div>
+                    <div className={styles.tabs}>
+                        {tabsY.map(tab => (
+                            <div
+                                key={tab}
+                                className={styles.tabY}  // 添加新类名
+                            >
+                                {tab}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
-
-        </div>
+            {/* 下拉菜单 */}
+            {/* <div>
+                {
+                    (menu) && (
+                        <div >
+                            <DropDown />
+                        </div>
+                    )
+                }
+            </div> */}
+        </>
     );
 };

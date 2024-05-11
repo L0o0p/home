@@ -13,6 +13,10 @@
         padding: 15px;
         color: #cfd9df;
         text-decoration: none;
+        width: 66px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:hover {
             background-color: rgb(219, 236, 241); // Example hover color
