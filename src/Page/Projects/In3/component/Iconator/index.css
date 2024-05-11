@@ -1,12 +1,12 @@
 html,
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
     position: fixed;
     width: 100%;
 }
 
 .bg {
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: #fff;
     /* width: 393px; */
     max-width: 40rem;
