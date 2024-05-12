@@ -44,13 +44,13 @@ export default function XBot(props: XBotProps) {
 
   // 从GLTF文件加载模型和材质
   const xBot = useRef<GroupProps>()
-  const { nodes, materials } = useGLTF('/models/XBot.glb') as unknown as GLTFResult;
+  const { nodes, materials } = useGLTF('/threeDCharacter/models/XBot.glb') as unknown as GLTFResult;
 
   // 从FBX文件加载动画
-  const { animations: TypingAnimation } = useFBX('/animations/Typing.fbx');
-  const { animations: PrayingAnimation } = useFBX('/animations/Praying.fbx');
-  const { animations: FallAnimation } = useFBX('/animations/Fall.fbx');
-  const { animations: StandingAnimation } = useFBX('/animations/Standing.fbx'); // 应该是不同的FBX文件
+  const { animations: TypingAnimation } = useFBX('/threeDCharacter/animations/Typing.fbx');
+  const { animations: PrayingAnimation } = useFBX('/threeDCharacter/animations/Praying.fbx');
+  const { animations: FallAnimation } = useFBX('/threeDCharacter/animations/Fall.fbx');
+  const { animations: StandingAnimation } = useFBX('/threeDCharacter/animations/Standing.fbx'); // 应该是不同的FBX文件
 
 
   // 使用useEffect来加载动画，并将它们分配给相应的动作变量。
@@ -142,4 +142,4 @@ export default function XBot(props: XBotProps) {
   )
 }
 
-useGLTF.preload('/XBot.glb')
+useGLTF.preload('/threeDCharacter/XBot.glb')

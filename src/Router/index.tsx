@@ -3,6 +3,7 @@ import { Home } from "../Page/Home"
 import { Projects } from "../Page/Projects"
 import { In3 } from "../Page/Projects/In3"
 import { ThreeDCharacter } from "../Page/Projects/ThreeDCharacter"
+import { CarCar } from "../Page/Projects/CarCar"
 
 const NotFound = () => <h1>404</h1>
 const routes = [
@@ -29,6 +30,10 @@ const routes = [
             {
                 path: 'threedcharacter',
                 element: <ThreeDCharacter />
+            },
+            {
+                path: 'car',
+                element: <CarCar />
             },
         ]
     },

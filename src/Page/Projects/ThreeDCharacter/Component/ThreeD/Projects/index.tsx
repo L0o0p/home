@@ -10,31 +10,31 @@ export const projects = [
     {
         title: 'One',
         url: 'https://www.bilibili.com/video/BV1mJ4m1G7T1?spm_id_from=333.1007.tianma.2-2-4.click',
-        image: '/image/020.png',
+        image: '/threeDCharacter/image/020.png',
         description: 'which is a bilibili video'
     },
     {
         title: 'Two',
         url: 'https://www.bilibili.com/video/BV1mJ4m1G7T1?spm_id_from=333.1007.tianma.2-2-4.click',
-        image: '/image/021.png',
+        image: '/threeDCharacter/image/021.png',
         description: 'which is a bilibili video'
     },
     {
         title: 'Three',
         url: 'https://www.bilibili.com/video/BV1mJ4m1G7T1?spm_id_from=333.1007.tianma.2-2-4.click',
-        image: '/image/008.png',
+        image: '/threeDCharacter/image/008.png',
         description: 'which is a bilibili video'
     },
     {
         title: 'Four',
         url: 'https://www.bilibili.com/video/BV1mJ4m1G7T1?spm_id_from=333.1007.tianma.2-2-4.click',
-        image: '/image/045.png',
+        image: '/threeDCharacter/image/045.png',
         description: 'which is a bilibili video'
     },
     {
         title: 'Five',
         url: 'https://www.bilibili.com/video/BV1mJ4m1G7T1?spm_id_from=333.1007.tianma.2-2-4.click',
-        image: '/image/068.png',
+        image: '/threeDCharacter/image/068.png',
         description: 'which is a bilibili video'
     }
 ]

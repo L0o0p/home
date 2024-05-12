@@ -9,7 +9,7 @@ export const Projects = () => {
     const projects = [
         { name: 'in3', img: '/projectImg/in3.png', link: '/projects/in3' },
         { name: 'threeDCharacter', img: '/projectImg/threeDCharacter.png', link: '/projects/threedcharacter' },
-        { name: 'carCar', img: '/projectImg/carCar.png', link: '/projects/carCar' },
+        { name: 'carCar', img: '/projectImg/carCar.png', link: '/projects/car' },
         { name: 'aiGallery', img: '/projectImg/aiGallery.png', link: '/projects/aiGallery' },
 
     ]

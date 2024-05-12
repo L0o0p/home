@@ -26,7 +26,7 @@ interface RoomSceneProps {
 
 export default function RoomScene(props: RoomSceneProps) {
   // load贴图文件
-  const texture = useTexture('/scenes/roomScene.png')
+  const texture = useTexture('/threeDCharacter/scenes/roomScene.png')
   // blender导出的时候默认flipY，可能导致mapping不正确，这里给他反回来
   texture.flipY = false;
   // texture.encoding = THREE.sRGBEncoding;//我也不知道有什么用
@@ -38,7 +38,7 @@ export default function RoomScene(props: RoomSceneProps) {
   const {
     nodes,
     // materials
-  } = useGLTF('/scenes/roomScene.gltf') as unknown as GLTFResult;
+  } = useGLTF('/threeDCharacter/scenes/roomScene.gltf') as unknown as GLTFResult;
   const { section } = props
 
   const root = useRef(null)
@@ -147,4 +147,4 @@ export default function RoomScene(props: RoomSceneProps) {
   )
 }
 
-useGLTF.preload('/scenes/roomScene.gltf')
+useGLTF.preload('/threeDCharacter/scenes/roomScene.gltf')
