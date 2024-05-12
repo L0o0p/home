@@ -7,7 +7,7 @@ import { useAtom } from 'jotai';
 export const NavBar = () => {
     const tabsX = ['Avatar', 'Home', 'Projects', 'Chat'];
     const tabsY = ['Login', 'Setting'];
-    const [activeTabIndex, setActiveTabIndex] = useState(1); // 初始化为 1，表示第一个标签
+    const [activeTabIndex, setActiveTabIndex] = useState(-1); // 初始化为 1，表示第一个标签
     const [menu, openMenu] = useState(false)
     const optionClick = () => {
         openMenu(!menu)

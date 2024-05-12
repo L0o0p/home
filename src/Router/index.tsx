@@ -4,6 +4,7 @@ import { Projects } from "../Page/Projects"
 import { In3 } from "../Page/Projects/In3"
 import { ThreeDCharacter } from "../Page/Projects/ThreeDCharacter"
 import { CarCar } from "../Page/Projects/CarCar"
+import { AiGallery } from "../Page/Projects/AiGallery"
 
 const NotFound = () => <h1>404</h1>
 const routes = [
@@ -34,6 +35,10 @@ const routes = [
             {
                 path: 'car',
                 element: <CarCar />
+            },
+            {
+                path: 'gallery',
+                element: <AiGallery />
             },
         ]
     },
