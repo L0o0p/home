@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import styles from './index.module.scss';
 import { Link } from 'react-router-dom';
+import { setProjectShow } from '../Store';
+import { useAtom } from 'jotai';
 
 export const NavBar = () => {
     const tabsX = ['Avatar', 'Home', 'Projects', 'Chat'];
@@ -19,12 +21,13 @@ export const NavBar = () => {
             setActiveTabIndex(parseInt(savedIndex));
         }
     }, []);
-
+    const [, setProjectShowstate] = useAtom(setProjectShow)
     const handleClick = (index: number) => {
         setActiveTabIndex(index);
         localStorage.setItem('activeTabIndex', index.toString()); // 保存索引到 LocalStorage
         openMenu(false)
         console.log('clicked the tab', index);
+        if (setProjectShow) { setProjectShowstate(!setProjectShow); console.log('state Changed', setProjectShow) }
     };
 
     return (

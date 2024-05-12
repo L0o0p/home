@@ -2,10 +2,12 @@
 import { Link } from 'react-router-dom';
 import styles from './index.module.scss'
 import { Outlet } from 'react-router-dom';
-import { useState } from 'react';
+import { setProjectShow } from '../../Store';
+import { useAtom } from 'jotai';
+
 
 export const Projects = () => {
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useAtom<boolean>(setProjectShow);
     const projects = [
         { name: 'in3', img: '/projectImg/in3.png', link: '/projects/in3' },
         { name: 'threeDCharacter', img: '/projectImg/threeDCharacter.png', link: '/projects/threedcharacter' },
