@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import styles from './index.module.scss';
 import { Link } from 'react-router-dom';
-import { setProjectShow } from '../Store';
+import { setProjectShow, setTab } from '../Store';
 import { useAtom } from 'jotai';
+import { Avatar } from './Avatar';
 
 export const NavBar = () => {
-    const tabsX = ['Avatar', 'Home', 'Projects', 'Chat'];
+    const tabsX = ['Home', 'Projects', 'Chat'];
     const tabsY = ['Login', 'Setting'];
-    const [activeTabIndex, setActiveTabIndex] = useState(-1); // 初始化为 1，表示第一个标签
+    const [activeTabIndex, setActiveTabIndex] = useAtom(setTab); // 初始化为 1，表示第一个标签
     const [menu, openMenu] = useState(false)
     const optionClick = () => {
         openMenu(!menu)
@@ -34,6 +35,7 @@ export const NavBar = () => {
         <>
             <div className={styles.navContainer}>
                 <div className={styles.tabs}>
+                    <Avatar />
                     {tabsX.map((tab, index) => (
                         <Link
                             key={tab}
@@ -60,16 +62,6 @@ export const NavBar = () => {
                     </div>
                 </div>
             </div>
-            {/* 下拉菜单 */}
-            {/* <div>
-                {
-                    (menu) && (
-                        <div >
-                            <DropDown />
-                        </div>
-                    )
-                }
-            </div> */}
         </>
     );
 };

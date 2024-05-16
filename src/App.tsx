@@ -1,6 +1,6 @@
 
 import { BrowserRouter } from 'react-router-dom'
-import './App.css'
+import './App.scss'
 import { NavBar } from './NavBar'
 import WraperRoutes from './Router'
 
