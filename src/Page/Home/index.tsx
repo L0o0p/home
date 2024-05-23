@@ -90,7 +90,7 @@ const TypingText = () => {
                 <p>
                     {`Hi! I'm Loop Shen, `}
                 </p>
-                <span className="txt-rotate" dataperiod="1000" data-rotate='[ "Web Developer", "3D Artist", "Web Designer", ]'>
+                <span className="txt-rotate" data-period="1000" data-rotate='[ "Web Developer", "3D Artist", "Web Designer", ]'>
                     <span className="wrap">{text}</span>
                 </span>
             </h1>

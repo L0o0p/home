@@ -24,7 +24,7 @@ export const ThreeD = () => {
             <ambientLight intensity={1.5 * Math.PI} />
             <Sky />
             <Scene />
-            {/* <Baked /> */}
+            {/* <Baked /> */}ya
             <InteractiveFloor />
             {/* <CameraWatcher /> */}
             <CameraControls />
