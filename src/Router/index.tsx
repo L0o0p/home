@@ -5,6 +5,8 @@ import { In3 } from "../Page/Projects/In3"
 import { ThreeDCharacter } from "../Page/Projects/ThreeDCharacter"
 import { CarCar } from "../Page/Projects/CarCar"
 import { AiGallery } from "../Page/Projects/AiGallery"
+import { AAA } from "../Page/AAA"
+
 
 const NotFound = () => <h1>404</h1>
 const routes = [
@@ -41,6 +43,10 @@ const routes = [
                 element: <AiGallery />
             },
         ]
+    },
+    {
+        path: '/1',
+        element: <AAA />
     },
 
     // 未定义的路由
